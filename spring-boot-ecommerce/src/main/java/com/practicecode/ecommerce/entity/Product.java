@@ -5,10 +5,11 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.Date;
 
 @Entity
-@Table(name = "product")
+@Table(name="product")
 @Data
 public class Product {
 
@@ -31,7 +32,7 @@ public class Product {
     private String description;
 
     @Column(name = "unit_price")
-    private String unitPrice;
+    private BigDecimal unitPrice;
 
     @Column(name = "image_url")
     private String imageUrl;
@@ -48,5 +49,5 @@ public class Product {
 
     @Column(name = "last_updated")
     @UpdateTimestamp
-    private Date lastUpdate;
+    private Date lastUpdated;
 }

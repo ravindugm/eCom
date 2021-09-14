@@ -7,7 +7,8 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-@Table(name = "product_category")
+@Table(name="product_category")
+// @Data -- known bug
 @Getter
 @Setter
 public class ProductCategory {
@@ -22,4 +23,5 @@ public class ProductCategory {
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "category")
     private Set<Product> products;
+
 }
